@@ -1,0 +1,87 @@
+/* --- Загальні стилі --- */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+a { color: #ffaf4d; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* --- Шапка сайту --- */
+header { display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: #2c2c2c; border-bottom: 2px solid #ff8c00; }
+header .logo img { height: 40px; width: auto; }
+header nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+header nav ul li { margin-left: 20px; }
+header nav ul li a { color: #fff; text-decoration: none; font-weight: bold; padding-bottom: 5px; border-bottom: 2px solid transparent; transition: color 0.2s, border-bottom 0.2s; }
+header nav ul li a:hover { color: #ff8c00; text-decoration: none; }
+header nav ul li a.active { color: #ff8c00; border-bottom: 2px solid #ff8c00; }
+header .user-actions a { color: #fff; text-decoration: none; margin-left: 15px; }
+header .user-actions .signup { background-color: #ff8c00; padding: 8px 12px; border-radius: 4px; transition: background-color 0.2s; }
+header .user-actions .signup:hover { background-color: #e67e00; text-decoration: none; }
+
+/* --- Основний контент --- */
+main { display: flex; padding: 20px; max-width: 1200px; margin: 0 auto; }
+.main-content { flex: 2; margin-right: 20px; }
+.main-content h2 { border-bottom: 2px solid #ff8c00; padding-bottom: 10px; color: #fff; margin-top: 0; }
+
+/* --- Сайдбар --- */
+.sidebar { flex: 1; }
+.sidebar section { background-color: #2c2c2c; padding: 15px; margin-bottom: 20px; border-radius: 4px; }
+.sidebar h2 { margin-top: 0; font-size: 18px; border-bottom: 2px solid #ff8c00; padding-bottom: 10px; }
+.live-matches .match, .recent-results .result { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #444; }
+.live-matches .match:last-child, .recent-results .result:last-child { border-bottom: none; }
+.team { display: flex; align-items: center; }
+.team img { width: 20px; height: 20px; margin-right: 10px; }
+.score, .score-final { font-weight: bold; margin: 0 10px; color: #ff8c00; }
+
+/* --- Новини (на головній) --- */
+.featured-news, .latest-news { background-color: #2c2c2c; padding: 20px; border-radius: 4px; margin-bottom: 20px; }
+.news-item img { width: 100%; max-width: 100%; height: auto; display: block; border-radius: 4px; margin-bottom: 10px; }
+.latest-news ul { list-style: none; padding: 0; margin: 0; }
+.latest-news ul li { padding: 10px 0; border-bottom: 1px solid #333; }
+.latest-news ul li:last-child { border-bottom: none; }
+
+/* 
+   =====================================================================
+   !!! СТИЛІ ДЛЯ СТОРІНКИ МАТЧІВ (З ПРИМУСОВИМ ВИПРАВЛЕННЯМ) !!! 
+   =====================================================================
+*/
+.match-day-group { margin-bottom: 30px; }
+.match-day-group h3 { padding-bottom: 10px; border-bottom: 1px solid #444; margin-bottom: 15px; color: #ccc; }
+.match-list-item { display: flex; align-items: center; background-color: #3a3a3a; padding: 15px; border-radius: 4px; margin-bottom: 10px; text-decoration: none; color: #e0e0e0; transition: background-color 0.2s, transform 0.2s; }
+.match-list-item:hover { background-color: #4f4f4f; transform: translateY(-2px); text-decoration: none; }
+.team-block { display: flex; align-items: center; flex: 1; }
+.team-block.left { justify-content: flex-end; }
+.team-block.right { justify-content: flex-start; }
+.team-name { font-size: 18px; font-weight: bold; }
+
+/* ОСЬ ГОЛОВНЕ ВИПРАВЛЕННЯ! */
+.team-block img {
+    width: 40px !important;      /* Примусово встановлюємо ширину */
+    height: 40px !important;     /* Примусово встановлюємо висоту */
+    object-fit: contain !important; /* Гарантує збереження пропорцій */
+}
+
+.team-block.left img { margin-left: 15px; }
+.team-block.right img { margin-right: 15px; }
+.time-block { font-size: 20px; font-weight: bold; color: #fff; margin: 0 25px; }
+.event-block { width: 180px; text-align: right; font-size: 14px; color: #aaa; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* --- Підвал сайту --- */
+footer { text-align: center; padding: 20px; background-color: #2c2c2c; border-top: 2px solid #ff8c00; margin-top: 20px; }
+/* --- Стилі для сторінки події --- */
+.event-banner img { width: 100%; border-radius: 4px; }
+.event-details { display: flex; justify-content: space-around; text-align: center; background-color: #3a3a3a; padding: 15px; border-radius: 4px; margin: 20px 0; }
+.event-details .detail-item { display: flex; flex-direction: column; }
+.event-details .detail-item strong { font-size: 14px; color: #aaa; margin-bottom: 5px; }
+.event-details .detail-item span { font-size: 18px; font-weight: bold; color: #fff; }
+.event-tabs { display: flex; border-bottom: 2px solid #444; margin-bottom: 20px; }
+.event-tabs a { padding: 10px 20px; color: #ccc; text-decoration: none; font-weight: bold; border-bottom: 3px solid transparent; margin-bottom: -2px; }
+.event-tabs a:hover { color: #fff; }
+.event-tabs a.active { color: #ff8c00; border-bottom-color: #ff8c00; }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
+.team-card { background-color: #3a3a3a; padding: 20px 10px; border-radius: 4px; text-align: center; font-weight: bold; transition: background-color 0.2s; }
+.team-card:hover { background-color: #4f4f4f; }
+.team-card img { width: 60px; height: 60px; margin-bottom: 10px; object-fit: contain; }
