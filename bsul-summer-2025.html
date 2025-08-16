@@ -15,7 +15,6 @@
             <ul>
                 <li><a href="index.html">Новини</a></li>
                 <li><a href="matches.html">Матчі</a></li>
-                <!-- Вкладка "Події" активна, бо це сторінка конкретної події -->
                 <li><a href="events.html" class="active">Події</a></li>
             </ul>
         </nav>
@@ -27,67 +26,42 @@
     <main>
         <div class="main-content">
             <h2>BSUL Havoc Summer 2025</h2>
-
-            <!-- Банер події -->
-            <div class="event-banner">
-                <img src="images/bsul-banner.jpg" alt="BSUL Havoc Summer 2025 Banner">
-            </div>
-
-            <!-- Основна інформація про подію -->
+            <div class="event-banner"><img src="images/bsul-banner.jpg" alt="BSUL Havoc Summer 2025 Banner"></div>
             <div class="event-details">
-                <div class="detail-item">
-                    <strong>Призовий фонд</strong>
-                    <span>10 грн</span>
-                </div>
-                <div class="detail-item">
-                    <strong>Дати</strong>
-                    <span>18.08 - 19.08</span>
-                </div>
-                <div class="detail-item">
-                    <strong>Команди</strong>
-                    <span>4</span>
-                </div>
-                <div class="detail-item">
-                    <strong>Місце</strong>
-                    <span>Онлайн</span>
-                </div>
+                <div class="detail-item"><strong>Призовий фонд</strong><span>10 грн</span></div>
+                <div class="detail-item"><strong>Дати</strong><span>18.08 - 19.08</span></div>
+                <div class="detail-item"><strong>Команди</strong><span>4</span></div>
+                <div class="detail-item"><strong>Місце</strong><span>Онлайн</span></div>
             </div>
-
-            <!-- Вкладки для навігації по турніру -->
             <div class="event-tabs">
-                <a href="#" class="active">Команди</a>
-                <a href="#">Матчі</a>
-                <a href="#">Результати</a>
+                <a href="#" class="active" data-tab="teams">Команди</a>
+                <a href="#" data-tab="matches">Матчі</a>
+                <a href="#" data-tab="results">Результати</a>
             </div>
-
-            <!-- Секція з командами-учасницями -->
-            <div id="teams" class="tab-content">
+            <div id="teams" class="tab-content" style="display: block;">
                 <h3>Команди-учасниці</h3>
                 <div class="team-grid">
-                    <div class="team-card">
-                        <img src="images/arsen.png" alt="SUPER PRO MAX MA...">
-                        <span>SUPER PRO MAX MA...</span>
-                    </div>
-                    <div class="team-card">
-                        <img src="images/pivo20.png" alt="Pivo20">
-                        <span>Pivo20</span>
-                    </div>
-                    <div class="team-card">
-                        <img src="images/true.png" alt="true. ESports">
-                        <span>true. ESports</span>
-                    </div>
-                    <div class="team-card">
-                        <img src="images/outsiders.png" alt="Outsiders">
-                        <span>Outsiders</span>
-                    </div>
+                    <!-- ОНОВЛЕНІ ПОСИЛАННЯ -->
+                    <div class="team-card"><a href="team-super-pro.html"><img src="images/arsen.png" alt="SUPER PRO MAX..."><span>SUPER PRO MAX M...</span></a></div>
+                    <div class="team-card"><a href="team-pivo20.html"><img src="images/pivo20.png" alt="Pivo20"><span>Pivo20</span></a></div>
+                    <div class="team-card"><a href="team-true-esports.html"><img src="images/true.png" alt="true. ESports"><span>true. ESports</span></a></div>
+                    <div class="team-card"><a href="team-outsiders.html"><img src="images/outsiders.png" alt="Outsiders"><span>Outsiders</span></a></div>
                 </div>
+            </div>
+            <div id="matches" class="tab-content" style="display: none;">
+                <h3>Розклад матчів турніру</h3>
+                <p>Інформація про розклад матчів з'явиться найближчим часом.</p>
+            </div>
+            <div id="results" class="tab-content" style="display: none;">
+                <h3>Результати матчів турніру</h3>
+                <p>Результати будуть опубліковані після завершення матчів.</p>
             </div>
         </div>
         <aside class="sidebar">
             <section>
                 <h2>Пов'язані новини</h2>
                 <ul>
-                    <li><a href="#">Анонс BSUL Havoc Summer 2025</a></li>
+                    <li><a href="article-bsul-announcement.html">Незабаром розпочнеться BSUL Havoc Summer 2025!</a></li>
                 </ul>
             </section>
         </aside>
@@ -95,5 +69,6 @@
     <footer>
         <p>&copy; 2025 Havoc.gg - Усі права захищено.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
