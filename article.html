@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Havoc.gg - Новина</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="images/Havoc-logo.png" alt="Havoc.gg Logo"></a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Новини</a></li>
+                <li><a href="matches.html">Матчі</a></li>
+                <li><a href="events.html">Події</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions"><a href="#">Увійти</a><a href="#" class="signup">Зареєструватися</a></div>
+    </header>
+    <main>
+        <div class="main-content">
+            <!-- Єдиний контейнер, який буде заповнено скриптом -->
+            <div id="article-dynamic-content" class="article-content">
+                <!-- Початковий стан, поки JS не спрацював -->
+                <h1>Завантаження...</h1>
+            </div>
+        </div>
+        <aside class="sidebar">
+            <section><h2>Інші новини</h2><p>Незабаром...</p></section>
+        </aside>
+    </main>
+    <footer><p>&copy; 2025 Havoc.gg - Усі права захищено.</p></footer>
+    
+    <!-- Підключаємо наш єдиний скрипт -->
+    <script src="script.js"></script>
+</body>
+</html>
